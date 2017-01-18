@@ -1,0 +1,63 @@
+---
+
+- hosts: nxos
+  vars:
+    cli:
+       host: "{{ host }}"
+       username: "{{ username }}"
+       password: "{{ password }}"
+       transport: nxapi
+  tasks:
+    - nxos_interface:
+        provider: "{{ cli }}"
+        interface: "{{ item }}"
+        description: 'Configured by Ansible'
+        mode: layer3
+      with_items:
+        - Ethernet2/1
+        - Ethernet2/2
+        - Ethernet2/3
+        - Ethernet2/4
+      tags: layer3
+
+- hosts: nxos
+  vars:
+    cli:
+       host: "{{ host }}"
+       username: "{{ username }}"
+       password: "{{ password }}"
+       transport: nxapi
+  tasks:
+    - name: Configure interface IP for NXOS1
+      nxos_ip_interface:
+        provider: "{{ cli }}"
+        interface: "{{ item.intf }}"
+        version: v4
+        state: present
+        addr: "{{ item.ip_addr }}"
+        mask: 30
+      with_items: "{{ my_interfaces }}"
+      tags: cfg_ip
+
+#- hosts: nxos2
+#  vars:
+#    cli:
+#       host: "{{ host }}"
+#       username: "{{ username }}"
+#       password: "{{ password }}"
+#       transport: nxapi
+#  tasks:
+#    - name: Configure interface IP for NXO2S
+#      nxos_ip_interface:
+#        provider: "{{ cli }}"
+#        interface: "{{ item.intf }}"
+#        version: v4
+#        state: present
+#        addr: "{{ item.ip_addr }}"
+#        mask: 30
+#      with_items:
+#        - {intf: Ethernet2/1, ip_addr: 10.1.1.2 }
+#        - {intf: Ethernet2/2, ip_addr: 10.1.1.6 }
+#        - {intf: Ethernet2/3, ip_addr: 10.1.1.10 }
+#        - {intf: Ethernet2/4, ip_addr: 10.1.1.14 }
+#      tags: nxos2

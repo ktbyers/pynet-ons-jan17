@@ -1,0 +1,9 @@
+---
+- hosts: cisco
+  tasks: 
+    - test_netmiko:
+        username: "{{ username }}"
+        password: "{{ password }}"
+        device_type: cisco_ios
+        hostname: "{{ host }}"
+        cmd: show run

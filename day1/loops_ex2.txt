@@ -1,0 +1,6 @@
+Loops Ex2
+----------
+
+Repeat loops_ex1 except use a while loop
+Don’t use a list: use a counter variable instead (counter variable = i)
+

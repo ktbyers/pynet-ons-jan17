@@ -1,0 +1,9 @@
+
+Netmiko Ex2
+-----------
+
+a. Connect to the Arista switch
+b. Configure a vlan with an ID between 100 to 999 (also configure a vlan name)
+   both directly from a script (i.e. configurations contained in the Python 
+   program) and from a file.
+

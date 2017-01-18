@@ -1,0 +1,13 @@
+---
+- name: Configure BGP
+  hosts: nxos1
+  tasks:
+    - nxos_bgp:
+        host: "{{ host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        transport: nxapi
+        asn: 10
+        vrf: default
+        state: present
+

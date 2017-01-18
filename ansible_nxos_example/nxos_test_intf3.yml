@@ -1,0 +1,12 @@
+---
+
+- hosts: nxos
+  vars:
+    cli:
+       host: "{{ host }}"
+       username: "{{ username }}"
+       password: "{{ password }}"
+       transport: nxapi
+
+  roles:
+   - nxos

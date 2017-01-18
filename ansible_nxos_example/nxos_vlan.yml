@@ -1,0 +1,19 @@
+---
+- name: Configure VLAN
+  hosts: nxos
+  tasks:
+    - name: Configure VLAN
+      nxos_vlan:
+        host: "{{ host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        transport: nxapi
+        vlan_id: "{{ item.vlan_id }}"
+        name: "{{ item.vlan_name }}"
+        state: present
+      with_items:
+        - {vlan_id: 800, vlan_name: red}
+        - {vlan_id: 801, vlan_name: orange}
+        - {vlan_id: 802, vlan_name: green}
+        - {vlan_id: 803, vlan_name: blue}
+

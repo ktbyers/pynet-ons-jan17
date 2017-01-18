@@ -1,0 +1,11 @@
+
+Classes Ex1
+------------
+
+Re-write Show Version Regex Exercise, but use a class to contain all the 
+functions (methods).
+
+Save the serial_number, model, vendor, uptime, os_version to the object.
+
+Print out these values from the object.
+

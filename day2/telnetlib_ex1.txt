@@ -1,0 +1,11 @@
+
+Telnet ex1
+-----------
+
+Write a script that connects to the lab pynet-rtr1, logins, and executes the
+'show ip int brief' command.
+
+Use functions to accomplish this.
+
+Optional - Use a Python class to accomplish this.
+

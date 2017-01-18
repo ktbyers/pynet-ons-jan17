@@ -1,0 +1,18 @@
+
+NX-API Exercise1
+-----------------
+
+Query a Cisco Nexus switch using pynxos and NX-API.
+
+Retrieve the 'show version' information back.
+
+Inspect the 'show version' information; figure out the data type of top-most
+data structure.
+
+Peel back the data structure layer-by-layer to get the show version
+information.
+
+Retieve 'proc_board_id', 'memory' from the show version information.
+
+Practice doing a raw command using pynxos.
+

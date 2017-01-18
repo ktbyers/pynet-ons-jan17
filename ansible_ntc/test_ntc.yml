@@ -1,0 +1,48 @@
+---
+- name: NAPALM gather information on IOS
+  hosts: pynet-rtr1
+  tasks:
+    - ntc_show_command:
+        host: "{{ host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        platform: cisco_ios
+        connection: ssh
+        command: 'show ip int brief'
+        template_dir: /home/kbyers/ntc-ansible/ntc-templates/templates/
+      register: output
+      tags: show_ip_int_brief
+
+    - ntc_show_command:
+        host: "{{ host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        platform: cisco_ios
+        connection: ssh
+        command: 'show ip bgp summary'
+        template_dir: /home/kbyers/ntc-ansible/ntc-templates/templates/
+      register: output
+      tags: show_ip_bgp
+
+    - ntc_show_command:
+        host: "{{ host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        platform: cisco_ios
+        connection: ssh
+        command: 'show lldp neighbors'
+        template_dir: /home/kbyers/ntc-ansible/ntc-templates/templates/
+      register: output
+      tags: show_lldp
+
+    - ntc_get_facts:
+        host: "{{ host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        platform: cisco_ios_ssh
+      register: output
+      tags: facts
+
+    - name: Print output
+      debug: msg="{{ output }}" 
+      tags: show_ip_int_brief, show_ip_bgp, show_lldp, facts

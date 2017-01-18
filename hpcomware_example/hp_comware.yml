@@ -1,0 +1,16 @@
+---
+
+  - name: Comware Test
+    hosts: comware
+    gather_facts: no
+    connection: local
+
+    tasks:
+      - name: Facts
+        comware_facts: 
+            username: "{{ username }}"
+            password: "{{ password }}"
+            hostname: "{{ host }}"
+        register: output
+
+      - debug: var=output
