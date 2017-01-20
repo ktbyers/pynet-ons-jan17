@@ -8,6 +8,10 @@ from napalm_base import get_network_driver
 from pyeapi.eapilib import CommandError
 import re
 
+import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+
 def wrapper_func(napalm_obj, napalm_method, banner=""):
     my_method = getattr(napalm_obj, napalm_method)
     print()
@@ -43,7 +47,7 @@ juniper_srx = dict(
 )
 
 nxos1 = dict(
-    hostname='85.190.176.121',
+    hostname='34.195.147.241',
     device_type='nxos',
     username='pyclass',
     password=password,
