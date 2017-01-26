@@ -9,63 +9,43 @@ juniper-srx             184.105.247.76
 """
 from getpass import getpass
 
-std_pwd = getpass("Enter standard password: ")
+password = getpass("Enter standard password: ")
 
-pynet_rtr1 = {
-    'device_type': 'cisco_ios',
-    'ip': '184.105.247.70',
-    'username': 'pyclass',
-    'password': std_pwd,
-}
+cisco_rtr1 = dict(
+    hostname='184.105.247.70',
+    device_type='ios',
+    username='pyclass',
+    password=password,
+    optional_args = {}
+)
 
-pynet_rtr2 = {
-    'device_type': 'cisco_ios',
-    'ip': '184.105.247.71',
-    'username': 'pyclass',
-    'password': std_pwd,
-}
+arista_sw1 = dict(
+    hostname='184.105.247.72',
+    device_type='eos',
+    username='pyclass',
+    password=password,
+    optional_args = {}
+)
 
-pynet_sw1 = {
-    'device_type': 'arista_eos',
-    'ip': '184.105.247.72',
-    'username': 'pyclass',
-    'password': std_pwd,
-}
+juniper_srx = dict(
+    hostname='184.105.247.76',
+    device_type='junos',
+    username='pyclass',
+    password=password,
+    optional_args = {}
+)
 
-pynet_sw2 = {
-    'device_type': 'arista_eos',
-    'ip': '184.105.247.73',
-    'username': 'pyclass',
-    'password': std_pwd,
-}
-
-pynet_sw3 = {
-    'device_type': 'arista_eos',
-    'ip': '184.105.247.74',
-    'username': 'pyclass',
-    'password': std_pwd,
-}
-
-pynet_sw4 = {
-    'device_type': 'arista_eos',
-    'ip': '184.105.247.75',
-    'username': 'pyclass',
-    'password': std_pwd,
-}
-
-juniper_srx = {
-    'device_type': 'juniper_junos',
-    'ip': '184.105.247.76',
-    'username': 'pyclass',
-    'password': std_pwd,
-}
+nxos1 = dict(
+    hostname='nxos1.twb-tech.com',
+    device_type='nxos',
+    username='pyclass',
+    password=password,
+    optional_args={'nxos_protocol': 'https', 'port': 8443}
+)
 
 device_list = [
-        pynet_rtr1,
-        pynet_rtr2,
-        pynet_sw1,
-        pynet_sw2,
-        pynet_sw3,
-        pynet_sw4,
+        cisco_rtr1,
+        arista_sw1,
         juniper_srx,
+        nxos1,
 ]
