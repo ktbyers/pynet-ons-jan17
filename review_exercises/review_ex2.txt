@@ -1,0 +1,4 @@
+1. Create a Python dictionary with four key-value pairs, one of the keys
+   should be 'ip_addr'.
+2. Update the ip_addr to be '10.20.30.222'
+3. Loop over the dictionary and print out both the keys and the values
