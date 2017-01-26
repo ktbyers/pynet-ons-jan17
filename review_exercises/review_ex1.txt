@@ -1,0 +1,3 @@
+1. Create a list with ten elements in it.
+2. Update element3 and assign it the string 'whatever'
+3. Use a for loop to loop over the list and print out all the values
