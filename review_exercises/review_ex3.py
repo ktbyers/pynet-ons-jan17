@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+
+output = """
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0              unassigned      YES unset  down                  down    
+FastEthernet1              unassigned      YES unset  down                  down    
+FastEthernet2              unassigned      YES unset  down                  down    
+FastEthernet3              unassigned      YES unset  down                  down    
+FastEthernet4              10.220.88.20    YES NVRAM  up                    up      
+Vlan1                      unassigned      YES unset  down                  down   """
+
+lines = output.splitlines()
+for line in lines:
+    if '10.220.88.20' in line:
+        print line

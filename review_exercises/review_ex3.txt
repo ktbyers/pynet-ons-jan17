@@ -1,0 +1,15 @@
+1. Take the following router output:
+
+output = """
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0              unassigned      YES unset  down                  down    
+FastEthernet1              unassigned      YES unset  down                  down    
+FastEthernet2              unassigned      YES unset  down                  down    
+FastEthernet3              unassigned      YES unset  down                  down    
+FastEthernet4              10.220.88.20    YES NVRAM  up                    up      
+Vlan1                      unassigned      YES unset  down                  down    """
+
+2. Make a variable in your program from it.
+
+3. Use splitlines() to split the above output based on each line
+4. Find the line with the '10.220.88.20' IP; only print this line
