@@ -11,6 +11,7 @@ juniper_srx = {
 
 a_device = Device(**juniper_srx)
 a_device.open()
+a_device.timeout = 90
 cfg = Config(a_device)
 
 print "Setting hostname using set notation"
