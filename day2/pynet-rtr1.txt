@@ -1,9 +1,9 @@
 Building configuration...
 
-Current configuration : 5390 bytes
+Current configuration : 5566 bytes
 !
-! Last configuration change at 00:08:23 PST Wed Nov 23 2016 by pyclass
-! NVRAM config last updated at 12:05:10 PST Wed Nov 23 2016 by pyclass
+! Last configuration change at 04:16:00 PST Thu Jan 19 2017 by pyclass
+! NVRAM config last updated at 12:05:11 PST Thu Jan 19 2017 by pyclass
 !
 version 15.4
 no service pad
@@ -18,7 +18,7 @@ boot system flash c880data-universalk9-mz.154-2.T1.bin
 boot-end-marker
 !
 !
-logging buffered 31337
+logging buffered 10000
 no logging console
 enable secret 5 $1$39ck$mpfZ3sWVn10YCXhSWI48R/
 !
@@ -93,6 +93,7 @@ archive
  path flash:pynet-rtr1-cfg
 username pyclass privilege 15 secret 5 $1$CQCe$poonB1jFHYQAWt/3eXub41
 username test9 secret 5 $1$CQCe$poonB1jFHYQAWt/3eXub41
+username testuser privilege 15 secret 5 $1$A5eB$6XIBwB/8iwj4U
 !
 !
 !
@@ -100,6 +101,9 @@ username test9 secret 5 $1$CQCe$poonB1jFHYQAWt/3eXub41
 lldp run
 !
 ip ssh version 2
+ip ssh pubkey-chain
+  username testuser
+   key-hash ssh-rsa E5D7E26A603DD18923113E45F29BDF22 ktbyers@twb-tech.com
 ip scp server enable
 ! 
 !
@@ -134,13 +138,13 @@ crypto map CRYPTO 20 ipsec-isakmp
  ! Incomplete
  set peer 2.2.2.1
  set transform-set AES-SHA 
- set pfs group5
+ set pfs group2
  match address VPN-TEST2
 crypto map CRYPTO 30 ipsec-isakmp 
  ! Incomplete
  set peer 3.3.3.1
  set transform-set AES-SHA 
- set pfs group5
+ set pfs group2
  match address VPN-TEST3
 crypto map CRYPTO 40 ipsec-isakmp 
  ! Incomplete
