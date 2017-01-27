@@ -7,8 +7,10 @@ from pynxos.device import Device
 
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
-nexus_ip = "nxos4.twb-tech.com"
-nxs_test = Device(host=nexus_ip, username="pyclass", password=getpass(),
+#nexus_ip = "34.195.147.241"
+nexus_ip = "nxos1.twb-tech.com" 
+nxs_test = Device(host=nexus_ip, username="pyclass", 
+                  password=getpass(),
                   transport='https', port=8443)
 
 #### FACTS
