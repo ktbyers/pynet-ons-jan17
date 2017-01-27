@@ -89,3 +89,4 @@ ENV/
 .ropeproject
 
 napalm_example/*.diff
+day4/CFGS/*.txt
