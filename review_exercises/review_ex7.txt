@@ -1,0 +1,59 @@
+
+Exercise7
+
+Ex7a:
+--------
+Create a function that prints "hello world". Call this function from your main program.
+
+
+Ex7b:
+--------
+Create a function that accepts two arguments (x, y) and that prints out "hello world func2". The
+function should also print out the values of x and y.
+
+Call this function from your main program.
+
+
+Ex7c:
+--------
+Create a function that accepts three arguments (x, y, z) where z has a default value of 10. The
+function should print out "hello world func3". It should also print out the values of x, y, z
+including labels indicating which variable you are printing out.
+
+Call function3 with two positional arguments.
+Call function3 with three positional arguments.
+Call function3 with three named arguments.
+Call function3 with one positional argument and two named arguments
+Call function3 as follows func3(7, 9, y=8). Observe that this generates an exception; gracefully
+handle the exception.
+
+
+Ex7d:
+--------
+Call function3 using *args in other words:
+func3(*my_list)
+
+where my_list is a three element list
+
+
+Ex7e:
+--------
+Call function3 using **kwargs in other words:
+func3(**my_dict)
+
+Where my_dict is a dictionary that contains three key-value pairs corresponding to x, y, and z.
+
+
+Ex7f:
+-------
+Write a function4 that takes three arguments (x, y, z) and returns x + y + z
+
+Call function4 using three integers; print the value returned from the function
+Call function4 using three strings; print the value returned from the function
+
+
+Ex7g:
+--------
+Write a function5 that takes a function (my_func) as an argument. Function5 should call my_func()
+three times and return None.
+
