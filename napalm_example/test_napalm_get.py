@@ -47,7 +47,7 @@ juniper_srx = dict(
 )
 
 nxos1 = dict(
-    hostname='34.195.147.241',
+    hostname='nxos1.twb-tech.com',
     device_type='nxos',
     username='pyclass',
     password=password,

@@ -3,6 +3,10 @@ from getpass import getpass
 from pprint import pprint as pp
 from napalm_base import get_network_driver
 
+import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+
 host = 'nxos1.twb-tech.com'
 username = 'pyclass'
 password = getpass()
