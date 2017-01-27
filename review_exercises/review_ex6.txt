@@ -1,0 +1,56 @@
+
+Exercise6 - Python List Review
+
+
+Ex6a:
+--------
+Create a random list (my_list) that contains seven elements.
+
+Loop over the list printing out all of the elements.
+
+
+Ex6b:
+--------
+Add an 8th element to the list.
+
+Loop over the list printing out both the list index and the element value.
+
+
+Ex6c:
+--------
+Change the third element of the list to a different value.
+
+Change the last element of the list to a different value.
+
+Print your list
+
+
+Ex6d:
+--------
+Remove the last element from your list.
+
+Remove the first element from your list.
+
+Remove the current third element from your list.
+
+Print your list and also print how long it is.
+
+
+Ex6e:
+--------
+Create another list that is three elements in length.
+
+Add the elements of the new_list to my_list such that my_list is now eight elements long.
+
+
+Ex6f:
+--------
+Insert a new element between the current 1st and 2nd elements.
+
+
+Ex6g:
+--------
+Print only the first four elements of the list.
+
+Create a new list that is the last five elements of your current list. Print out this new list.
+
