@@ -3,8 +3,8 @@
 if __name__ == "__main__":
     banner = '-' * 80
 
-    #### Exercise 1a #####
-    print "\nExercise 1a"
+    #### Exercise 5a #####
+    print "\nExercise 5a"
     print banner
     my_user = {
         'name': 'Jane Coder',
@@ -16,8 +16,8 @@ if __name__ == "__main__":
     print my_user.get('address')
     print banner
 
-    #### Exercise 1b #####
-    print "\nExercise 1b"
+    #### Exercise 5b #####
+    print "\nExercise 5b"
     print banner
     try:
         print my_user['city']
@@ -26,8 +26,8 @@ if __name__ == "__main__":
         print my_user['city']
     print banner
 
-    #### Exercise 1c #####
-    print "\nExercise 1c"
+    #### Exercise 5c #####
+    print "\nExercise 5c"
     print banner
     city = my_user.pop('city')
     print city
@@ -37,8 +37,8 @@ if __name__ == "__main__":
         print my_user.get('city')
     print banner
 
-    #### Exercise 1d #####
-    print "\nExercise 1d"
+    #### Exercise 5d #####
+    print "\nExercise 5d"
     print banner
     city = my_user.pop('city')
     print city
@@ -47,23 +47,23 @@ if __name__ == "__main__":
     print my_user
     print banner
 
-    #### Exercise 1e #####
-    print "\nExercise 1e"
+    #### Exercise 5e #####
+    print "\nExercise 5e"
     print banner
     print "Using format with a dictionary"
     print "{name:15} {phone:15} {address:30} {city:30}".format(**my_user)
     print banner
 
-    #### Exercise 1f #####
-    print "\nExercise 1f"
+    #### Exercise 5f #####
+    print "\nExercise 5f"
     print banner
     print "Print out just the keys"
     for k in my_user:
         print k
     print banner
 
-    #### Exercise 1g #####
-    print "\nExercise 1g"
+    #### Exercise 5g #####
+    print "\nExercise 5g"
     print banner
     print "Print out the key, value pairs"
     for k, v in my_user.items():

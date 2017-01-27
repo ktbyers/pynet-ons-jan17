@@ -4,7 +4,7 @@ from pyhpecw7.features.interface import Interface
 from getpass import getpass
 
 
-ip = raw_input("Enter IP address")
+ip = raw_input("Enter IP address: ")
 device = HPCOM7(host=ip, username='admin', password=getpass())
 print device.open()
 

@@ -1,20 +1,20 @@
 Exercise5 - Python Dictionaries
 
-*Ex1a:
+*Ex5a:
 ---------
 Create a dictionary representing a user. The dictionary should have keys corresponding to the
 user's name, phone number, and address.
 
 Print out the user's name, phone number and address from the dictionary.
 
-*Ex1b:
+*Ex5b:
 ---------
 Try to access a non-existent key in dictionary gracefully handle this using try/except.
 
 Add a dictionary key representing the user's city.
 
 
-*Ex1c:
+*Ex5c:
 ---------
 Remove the city key from the user's dictionary
 
@@ -22,7 +22,7 @@ Try to access the city key using the .get() method. Re-add the key if the .get()
 None.
 
 
-*Ex1d:
+*Ex5d:
 ---------
 Remove the city key from the user's dictionary
 
@@ -30,7 +30,7 @@ Use the setdefault() method to simultaneously print the user's city and set it i
 (use a default city of 'Denver').
 
 
-Ex1e:
+Ex5e:
 --------
 Use the string format method and **kwargs to print out values from the dictionary.
 
@@ -39,12 +39,12 @@ For example,
 print "Printing from a dictionary: {key1} {key2} {key3}".format(**my_dict)
 
 
-Ex1f:
+Ex5f:
 -------
 Use a for loop to loop over the dictionary printing out the dictionary's keys.
 
 
-Ex1g:
+Ex5g:
 --------
 Use a for loop to loop over the dictionary printing out the dictionary's keys and values.
 
